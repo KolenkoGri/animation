@@ -1,0 +1,94 @@
+.block {
+    margin: 0 auto;
+    width: 500px;
+    height: 30px;
+    border: 5px rgb(94, 94, 178) solid;
+    margin-bottom: 100px;
+}
+
+.block2 {
+    width: 90%;
+    height: 100%;
+    background-color: aquamarine;
+    animation-duration: 3s;
+    animation-name: load;
+
+}
+
+@keyframes load {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+/* Задание 2 */
+
+.block3 {
+	animation-play-state: paused;
+	animation-duration: 6s;
+	animation-name: move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    background-color: rgb(84, 84, 8);
+	height: 50px;
+    margin-bottom: 100px;
+}
+.block3:hover {
+	animation-play-state: running;
+}
+
+@keyframes move {
+	0% {
+		width: 10%;
+	}
+	50% {
+		width: 100%;
+	}
+    100% {
+        width: 10%;
+    }
+} 
+
+/*  */
+
+.block4 {
+    position: relative; 
+    overflow: hidden; 
+    width: 180px; 
+    height: 180px;
+    border: 5px solid #9D8500; 
+    border-radius: 5px; 
+    background-color: green;
+    margin: 0 auto;
+}
+
+.ball {
+    position: absolute;
+    width: 13px; 
+    height: 13px; 
+    border-radius: 15px;
+    background-color: blue; 
+    animation: bX 1.5s linear 2s infinite alternate, bY 2s linear 2s infinite alternate;
+}
+
+@keyframes bX {
+    from {
+        left: 0;
+    } 
+    to {
+        left: 167px;
+    }
+}
+@keyframes bY {
+    from {
+        top: 0;
+    } 
+    to {
+        top: 167px;
+    }
+}
+
